@@ -1,0 +1,20 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "hello-rtd"
+version         = "0.1.0"
+description     = "Minimal example project for Read the Docs"
+authors         = [{name = "Your Name", email = "you@example.com"}]
+readme          = "README.md"
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+docs = [
+  # keep this list short; matches docs/requirements.txt
+  "sphinx>=7",
+  "furo",
+  "myst-parser",            # optional: Markdown support
+  "sphinx-autodoc-typehints"
+]
