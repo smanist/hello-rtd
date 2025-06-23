@@ -1,4 +1,5 @@
 hello_rtd.egg-info
 docs/_build
+docs/api
 .DS_Store
 __pycache__
