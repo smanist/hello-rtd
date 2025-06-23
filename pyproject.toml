@@ -16,5 +16,6 @@ docs = [
   "sphinx>=7",
   "furo",
   "myst-parser",            # optional: Markdown support
+  "myst-nb>=1.0",
   "sphinx-autodoc-typehints"
 ]

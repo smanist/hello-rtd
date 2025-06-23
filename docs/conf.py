@@ -23,8 +23,9 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.doctest',
-    "myst_parser",
-    "sphinx_autodoc_typehints"
+    # "myst_parser",   # Loaded by myst_nb
+    "myst_nb",
+    "sphinx_autodoc_typehints",
 ]
 
 templates_path = ['_templates']
@@ -36,6 +37,17 @@ autodoc_default_options = {
     "undoc-members": True,
     "show-inheritance": True,
 }
+
+nb_execution_mode = "off"         # "auto", "off", "force", or "cache"
+# nb_execution_cache_path = ".jupyter_cache"  # default; nice to keep env tidy
+# nb_execution_timeout = 180        # seconds per cell (tune as needed)
+
+myst_enable_extensions = [
+    "amsmath",
+    "dollarmath"
+]
+myst_dmath_allow_labels = True
+myst_dmath_double_inline = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
